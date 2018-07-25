@@ -9,13 +9,15 @@ package ventas;
  *
  * @author Vocho
  */
-public class Factura extends Ticket{
+public class Factura {
 
     String rfc;
     int numFactura;
-
-    public Factura(String _concepto, int _totProd, boolean _facturar, double _precio) {
-        super(_concepto, _totProd, _facturar, _precio);
+    
+    
+    public Factura(int _numFactura, String _rfc) {
+        numFactura = _numFactura;
+         rfc = _rfc;
     }
 
     void setRfc(String _rfc) {

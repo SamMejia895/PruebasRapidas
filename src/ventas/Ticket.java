@@ -10,28 +10,30 @@ package ventas;
  * @author Vocho
  */
 public class Ticket extends Venta {
-    
-    
+
     boolean facturar;
     double precio;
+    double ventaTot;
 
-    Ticket(String _concepto, int _totProd, boolean _facturar,double _precio){
-    super(_concepto,_totProd);
-    facturar = _facturar;
-    precio = _precio;
+    Ticket(String _concepto, int _totProd, boolean _facturar, double _precio) {
+        super(_concepto, _totProd);
+        facturar = _facturar;
+        precio = _precio;
     }
 
-    void setFacturar(boolean _facturar) {
-        facturar=_facturar;
-    }
-    
-        boolean getFacturar() {
+
+    boolean getFacturar() {
         return facturar;
     }
 
-    double calcularIva(double _precio) {    
-        precio=(_precio*.1600);
+    double calcularVentaTot(int _totProd, double _precio) {
+        ventaTot = _totProd * _precio;
+        return ventaTot;
+    }
+
+    double calcularIva(double _ventaTot) {
+        precio = (_ventaTot * .1600);
         return precio;
     }
-    
+
 }

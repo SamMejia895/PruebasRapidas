@@ -9,25 +9,18 @@ package ventas;
  *
  * @author Vocho
  */
-public class NotaCompra extends Ticket {
+public class NotaCompra {
 
     String dirEnvio;
     int numNota;
 
-    public NotaCompra(String _concepto, int _totProd, boolean _facturar, double _precio) {
-        super(_concepto, _totProd, _facturar, _precio);
-    }
-
-    void setRfc(String _dirEnvio) {
+    public NotaCompra(int _numNota, String _dirEnvio) {
+        numNota = _numNota;
         dirEnvio = _dirEnvio;
     }
 
-    String getRfc() {
+    String getDirEnvio() {
         return dirEnvio;
-    }
-
-    void setnumNota(int _numNota) {
-        numNota = _numNota;
     }
 
     int getnumNota() {

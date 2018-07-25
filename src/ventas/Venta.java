@@ -5,8 +5,6 @@
  */
 package ventas;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 
 /**
  *
@@ -43,24 +41,4 @@ public class Venta {
         return concepto;
     }
 
-    public static void main(String args[]) throws Exception {
-        InputStreamReader isr = new InputStreamReader(System.in);
-        BufferedReader br = new BufferedReader(isr);
-
-        // Mensaje para el usuario
-        
-
-        System.out.print("Ingrese concepto de venta: ");
-        String str = br.readLine();
-//        ventAuto.setConcepto(str);
-
-        System.out.print("Ingrese total de productos: ");
-        String totPro = br.readLine();
-        int totPro1= Integer.valueOf(totPro);
-//        ventAuto.setTotalProductos(totPro);
-        Venta ventAuto = new Venta(str, totPro1);
-        System.out.println("concepto de venta: " + ventAuto.getConcepto()
-                + " total de productos: " + ventAuto.getTotalProductos());
-
-    }
 }
